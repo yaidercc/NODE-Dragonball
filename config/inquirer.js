@@ -8,19 +8,15 @@ const questions = [{
     message: '¿Que desea hacer?',
     choices: [{
             value: 1,
-            name: `${'1.'.green} Buscar personaje.`
+            name: `${'1.'.red} Buscar personaje.`
         },
         {
             value: 2,
-            name: `${'2.'.green} Buscar planete.`
-        },
-        {
-            value: 3,
-            name: `${'3.'.green} Historial.`
+            name: `${'2.'.red} Historial.`
         },
         {
             value: 0,
-            name: `${'0.'.green} Salir.`
+            name: `${'0.'.red} Salir.`
         },
     ]
 }];
@@ -31,9 +27,9 @@ const questions = [{
  */
 const inquirerMenu = async () => {
     console.clear();
-    console.log("========================".green);
+    console.log("========================".red);
     console.log("Seleccione una opción");
-    console.log("========================".green);
+    console.log("========================".red);
 
     const {
         option
@@ -113,7 +109,7 @@ const pause = async () => {
     const choices = [{
         type: 'input',
         name: 'option',
-        message: `Presione ${"Enter".green} para continuar.`
+        message: `Presione ${"Enter".red} para continuar.`
     }]
 
     const {
